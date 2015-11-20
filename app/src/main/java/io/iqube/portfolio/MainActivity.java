@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
-        String ToastMessage;
+        String ToastMessage="";
         switch (v.getId())
         {
            case R.id.spotify:ToastMessage="This will launch my spotify streamer App";
@@ -53,5 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.capstone:ToastMessage="This will launch My CAPSTONE project App!";
                 break;
         }
+
+        Toast.makeText(this,ToastMessage,Toast.LENGTH_LONG).show();
     }
 }
